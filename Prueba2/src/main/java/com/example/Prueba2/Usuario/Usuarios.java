@@ -8,7 +8,7 @@ public class Usuarios {
     private String id;
     private String correo;
     private Date ultimaConexion;
-    private ArrayList<Integer> siguiendo;
+    private ArrayList<String> siguiendo;
 
     public String getId() {
         return id;
@@ -34,15 +34,15 @@ public class Usuarios {
         this.ultimaConexion = ultimaConexion;
     }
 
-    public ArrayList<Integer> getSiguiendo() {
+    public ArrayList<String> getSiguiendo() {
         return siguiendo;
     }
 
-    public void setSiguiendo(ArrayList<Integer> siguiendo) {
+    public void setSiguiendo(ArrayList<String> siguiendo) {
         this.siguiendo = siguiendo;
     }
 
-    public Usuarios(String id, String correo, Date ultimaConexion, ArrayList<Integer> siguiendo) {
+    public Usuarios(String id, String correo, Date ultimaConexion, ArrayList<String> siguiendo) {
         this.id = id;
         this.correo = correo;
         this.ultimaConexion = ultimaConexion;
