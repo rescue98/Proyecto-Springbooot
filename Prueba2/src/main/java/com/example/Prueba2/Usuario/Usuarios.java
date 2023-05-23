@@ -1,4 +1,4 @@
-package com.example.Prueba2;
+package com.example.Prueba2.Usuario;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +8,7 @@ public class Usuarios {
     private String id;
     private String correo;
     private Date ultimaConexion;
-    private ArrayList<Integer> siguiento;
+    private ArrayList<Integer> siguiendo;
 
     public String getId() {
         return id;
@@ -34,18 +34,18 @@ public class Usuarios {
         this.ultimaConexion = ultimaConexion;
     }
 
-    public ArrayList<Integer> getSiguiento() {
-        return siguiento;
+    public ArrayList<Integer> getSiguiendo() {
+        return siguiendo;
     }
 
-    public void setSiguiento(ArrayList<Integer> siguiento) {
-        this.siguiento = siguiento;
+    public void setSiguiendo(ArrayList<Integer> siguiendo) {
+        this.siguiendo = siguiendo;
     }
 
-    public Usuarios(String id, String correo, Date ultimaConexion, ArrayList<Integer> siguiento) {
+    public Usuarios(String id, String correo, Date ultimaConexion, ArrayList<Integer> siguiendo) {
         this.id = id;
         this.correo = correo;
         this.ultimaConexion = ultimaConexion;
-        this.siguiento = siguiento;
+        this.siguiendo = siguiendo;
     }
 }
