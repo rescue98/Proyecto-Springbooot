@@ -1,6 +1,8 @@
 package com.example.Prueba2.Usuario;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Usuarios {
@@ -47,5 +49,27 @@ public class Usuarios {
         this.correo = correo;
         this.ultimaConexion = ultimaConexion;
         this.siguiendo = siguiendo;
+    }
+    public boolean esInactivo() {
+        // Define aquí la lógica para determinar si el usuario es inactivo
+        // Puedes utilizar la fecha actual y la fecha de última conexión para calcular la inactividad
+
+        // Por ejemplo, si consideramos que un usuario es inactivo si su última conexión es anterior a 4 años de la fecha actual
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.YEAR, -4);
+        Date fechaInactividad = calendar.getTime();
+
+        return ultimaConexion.before(fechaInactividad);
+    }
+    @Override
+    public String toString() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String ultimaConexionFormatted = dateFormat.format(ultimaConexion);
+        return "Usuarios{" +
+                "id='" + id + '\'' +
+                ", correo='" + correo + '\'' +
+                ", ultimaConexion=" + ultimaConexionFormatted +
+                ", siguiendo=" + siguiendo +
+                '}';
     }
 }
